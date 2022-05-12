@@ -18,12 +18,13 @@ state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
 aim = vector(5, 0)
-pacman = vector(-40, -80)
+pacman = vector(-40, 40)
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
+    [vector(-40,-80),vector(5,0)]
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -85,7 +86,7 @@ def valid(point):
 def world():
     "Draw world using path."
     bgcolor('black')
-    path.color('blue')
+    path.color('cyan')
 
     for index in range(len(tiles)):
         tile = tiles[index]
@@ -98,7 +99,7 @@ def world():
             if tile == 1:
                 path.up()
                 path.goto(x + 10, y + 10)
-                path.dot(2, 'white')
+                path.dot(4, 'blue')
 
 def move():
     "Move pacman and all ghosts."
@@ -132,6 +133,7 @@ def move():
                 vector(-5, 0),
                 vector(0, 5),
                 vector(0, -5),
+                vector(5,0),
             ]
             plan = choice(options)
             course.x = plan.x
