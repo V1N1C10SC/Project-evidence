@@ -86,7 +86,7 @@ def valid(point):
 def world():
     "Draw world using path."
     bgcolor('black')
-    path.color('cyan')
+    path.color('blue')
 
     for index in range(len(tiles)):
         tile = tiles[index]
@@ -99,7 +99,7 @@ def world():
             if tile == 1:
                 path.up()
                 path.goto(x + 10, y + 10)
-                path.dot(4, 'blue')
+                path.dot(2, 'white')
 
 def move():
     "Move pacman and all ghosts."
