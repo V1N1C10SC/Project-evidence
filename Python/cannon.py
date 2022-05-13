@@ -16,6 +16,10 @@ ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+#Variabes to keep count of the number of hits
+count = 0
+targets_hit = {"targets" : count}
+
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
@@ -45,6 +49,11 @@ def draw():
 def move():
     "Move ball and targets."
     # Generate a new target at random times
+
+    global count
+    global targets_hit
+
+
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
@@ -67,6 +76,11 @@ def move():
     for target in dupe:
         if abs(target - ball) > 13:
             targets.append(target)
+        else:
+            #If the target is hit, increment the target an print it to the terminal
+            count += 1
+            targets_hit = {"targets" : count}
+            print(targets_hit)
 
     draw()
 
