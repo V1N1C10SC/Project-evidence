@@ -109,11 +109,12 @@ def world():
             x = (index % 20) * 20 - 200
             y = 180 - (index // 20) * 20
             square(x, y)
-
+            
+            "Change dot size and color"
             if tile == 1:
                 path.up()
                 path.goto(x + 10, y + 10)
-                path.dot(2, 'white')
+                path.dot(4, 'blue')
 
 def move():
     "Move pacman and all ghosts."
