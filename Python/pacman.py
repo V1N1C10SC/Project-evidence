@@ -21,7 +21,7 @@ writer = Turtle(visible=False)
 # Original pacman position pacman = vector(-40, -80)
 #New postion:
 aim = vector(5, 0)
-pacman = vector(-40, 40)
+pacman = vector(0, 40)
 
 
 
