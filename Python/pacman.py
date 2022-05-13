@@ -3,9 +3,9 @@
 Exercises
 
 1. Change the board.
-2. Change the number of ghosts.
-3. Change where pacman starts.
-4. Make the ghosts faster/slower.
+2. Change the number of ghosts. #Added two more
+3. Change where pacman starts   #Done
+4. Make the ghosts faster/slower. 
 5. Make the ghosts smarter.
 
 """
@@ -17,14 +17,25 @@ from freegames import floor, vector
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
+
+# Original pacman position pacman = vector(-40, -80)
+#New postion:
 aim = vector(5, 0)
 pacman = vector(-40, 40)
+
+
+
+
+
+#To add new ghosts create new lists of vectors
+#And set the coordenates where you want them to be 
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
     [vector(-40,-80),vector(5,0)]
+
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -46,7 +57,8 @@ tiles = [
     0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+
 ]
 
 def square(x, y):
@@ -149,7 +161,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 100)
+    ontimer(move, 200)
 
 def change(x, y):
     "Change pacman aim if valid."
