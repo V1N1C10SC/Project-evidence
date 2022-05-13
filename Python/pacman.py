@@ -17,11 +17,14 @@ from freegames import floor, vector
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
-aim = vector(-50, 50)
 
 # Original pacman position pacman = vector(-40, -80)
 #New postion:
-pacman = vector(150,-100 )
+aim = vector(5, 0)
+pacman = vector(-40, 40)
+
+
+
 
 
 #To add new ghosts create new lists of vectors
@@ -30,9 +33,8 @@ ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
-    [vector(80, -100), vector(5, 0)],
-    [vector(100, -130), vector(-5, 0)],
-    [vector(100, -150), vector(-5, 0)],
+    [vector(100, -160), vector(-5, 0)],
+    [vector(-40,-80),vector(5,0)]
 
 ]
 tiles = [
@@ -143,6 +145,7 @@ def move():
                 vector(-5, 0),
                 vector(0, 5),
                 vector(0, -5),
+                vector(5,0),
             ]
             plan = choice(options)
             course.x = plan.x
