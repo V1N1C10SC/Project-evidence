@@ -1,22 +1,20 @@
-# Semana Tec Metodo Computacionales
-
-### Integrantes 
+## Authors 
 - Natalia Maya
 - Fernando Valdeon 
 - Vinicio Santoyo
 
 
-## CAMBIOS
+## Changes
 
 ### PACMAN
-- Se cambia la posicion de pacman
-- se agregan dos fantasmas
-- Se hace mas grande el mapa
+- Changed pacman positions
+- Added two more ghosts
+- Maked the map bigger
 
 
 ### SNAKE 
 ### CANNON
-- Se agrega variable para llevar cuenta de los targets destruidos y se imprime dicha variable en consola
+- Added a variable to keep track of the destroyed targets
 ### PAINT
 ### MEMMORY
-- se agrega variable para llevar cuenta de las veces que se hace click en unn card
+- Added variable to keep count of the number of taps a user does on the cards
