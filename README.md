@@ -1,6 +1,16 @@
 # New-example
-Test for git sync
-Hi
+Semana Tec Metodo Computacionales
 
-## Authors
-Vinicio Santoyo
+### Integrantes 
+- Natalia Maya
+- Fernando Valdeon 
+- Vinicio Santoyo
+
+
+## CAMBIOS
+
+### PACMAN
+### SNAKE 
+### CANNON
+### PAINT
+### MEMMORY
