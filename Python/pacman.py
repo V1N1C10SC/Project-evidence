@@ -97,10 +97,11 @@ def valid(point):
 
     return point.x % 20 == 0 or point.y % 20 == 0
 
+"Path color changed"
 def world():
     "Draw world using path."
     bgcolor('black')
-    path.color('blue')
+    path.color('cyan')
 
     for index in range(len(tiles)):
         tile = tiles[index]
