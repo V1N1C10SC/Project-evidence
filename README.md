@@ -1,5 +1,4 @@
-# New-example
-Semana Tec Metodo Computacionales
+# Semana Tec Metodo Computacionales
 
 ### Integrantes 
 - Natalia Maya
